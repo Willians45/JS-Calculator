@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        #calculadora{
+            margin-top: 50px;
+            width: 260px;
+            height: 480px;
+            border-radius: 30px;
+            box-shadow: rgba(0, 0, 0, 0.555) 1px 5px 10px 1px;
+        }
+        .campo{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        .campo input{
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            border: none;
+            color: black;
+            background-color: #F0F0F0;
+        }
+        .botones{
+            display: grid;
+            grid-template-columns: 62px 62px 62px;
+            grid-template-rows: 52px 52px 52px 52px 52px 52px;
+            justify-content: center;
+        }
+        .botones button{
+            width: 60px;
+            height: 50px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            transition: all ease-in-out 0.2s;
+        }
+        .botones button:hover{
+            background-color: rgb(48, 48, 48);
+            transition: all ease-in-out 0.2s;
+            color: white;
+        }
+        .calcular{
+            display: flex;
+            width: 184px;
+            justify-content: center;
+        }
+        .calcular button{
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculadora">
+        <div class="campo">
+            <input id="campo" type="text" disabled>
+        </div>
+        <div class="botones">
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="operator('+')">+</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="operator('-')">-</button>
+            <button onclick="operator('*')">*</button>
+            <button onclick="limpiaPantalla()">C</button>
+            <button onclick="operator('/')">/</button>
+            <div class="calcular">
+                <button onclick="calculo()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
